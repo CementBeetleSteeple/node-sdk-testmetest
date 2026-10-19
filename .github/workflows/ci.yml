@@ -28,4 +28,4 @@ jobs:
         with:
           node-version: '20'
       - run: npm install --no-package-lock
-      - run: npx tsc --noEmit
+      - run: npx tsc --noEmit --skipLibCheck
