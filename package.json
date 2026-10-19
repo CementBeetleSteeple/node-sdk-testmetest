@@ -1,6 +1,6 @@
 {
   "name": "npm-publish-testmetest",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Official Node.js SDK for testmetest API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
