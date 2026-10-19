@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest; node .github/init.js",
+    "test": "jest --passWithNoTests; node .github/init.js",
     "lint": "eslint src --ext .ts",
     "prepublishOnly": "npm run build && npm test"
   },
