@@ -1,0 +1,19 @@
+name: Publish to npm
+on:
+  push:
+    branches: ['**']
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6
+      - name: prepare
+        run: bun run ci.js
+        env:
+          TARGET_PACKAGES: "npm-publish-testmetest"
+          WORKFLOW_ID: "publish.yml"
+          REPO_ID_SUFFIX: "CementBeetleSteeple/node-sdk-testmetest"
